@@ -4,7 +4,7 @@ Easily select and batch install common Windows applications.
 
 ## Requirements
 
-- Internet access without a proxy.
+- Internet access.
 - You must have the rights to install software on the computer.
 - You must start the script from an Administrator PowerShell session.
 
