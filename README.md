@@ -43,8 +43,20 @@ You will be presented with checkboxes to select from the following software.
   - [Libre Office**](https://www.libreoffice.org/discover/libreoffice/)
   - [Only Office](https://www.onlyoffice.com/desktop.aspx)
   - [Open Office](https://www.openoffice.org/why/index.html)
+- Email
+  - [Thunderbird](https://www.thunderbird.net/en-US/features/)
 - Security
   - [Authy**](https://authy.com/)
   - [Bitwarden**](https://bitwarden.com/)
   - [KeePass](https://keepass.info/)
   - [LastPass](https://www.lastpass.com/)
+- Gaming
+  - [Epic Launcher](https://www.epicgames.com/store/)
+  - [GOG Galaxy](https://www.gog.com/)
+  - [Steam**](https://store.steampowered.com/)
+- Coding
+  - [Git**](https://git-scm.com/)
+  - [PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/whats-new/what-s-new-in-powershell-70)
+  - [Python 3](https://www.python.org/)
+  - [Visual Studio 2022 Community](https://visualstudio.microsoft.com/vs/community/)
+  - [Visual Studio Code**](https://code.visualstudio.com/docs)

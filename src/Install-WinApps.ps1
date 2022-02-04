@@ -92,6 +92,7 @@ Function Invoke-SoftwareInstallProcess {
         LibreOffice               = 'TheDocumentFoundation.LibreOffice'
         OpenOffice                = 'Apache.OpenOffice'
         OnlyOffice                = 'ONLYOFFICE.DesktopEditors'
+        Thunderbird               = 'Mozilla.Thunderbird'
         Authy                     = 'Twilio.Authy'
         Bitwarden                 = 'Bitwarden.Bitwarden'
         LastPass                  = 'LogMeIn.LastPass'
@@ -235,6 +236,9 @@ Function Initialize-Form {
 
     $officeList = [System.Collections.Generic.List[string]]@('Libre Office', 'Open Office', 'Only Office')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Office Suites' -SoftwareList $officeList
+
+    $emailList = [System.Collections.Generic.List[string]]@('Thunderbird')
+    $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Email' -SoftwareList $emailList
 
     $securityList = [System.Collections.Generic.List[string]]@('Authy', 'Bitwarden', 'LastPass', 'KeePass')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Security' -SoftwareList $securityList
