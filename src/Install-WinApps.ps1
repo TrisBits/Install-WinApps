@@ -103,23 +103,29 @@ Function Invoke-SoftwareInstallProcess {
         }
     }
 
+    if ($softwareSelected.Count -eq 0) {
+        $CurrentOperation.Text = "Current Operation:`n No items to install"
+        $CurrentOperation.Refresh()
+        $ProgressBar.Value = 100
+        $ProgressBar.Refresh()
+        Return
+    }
 
     [int]$progressAmount = [math]::floor((100 - $ProgressBar.Value) / $softwareSelected.Count)
 
     ForEach ($software in $softwareSelected) {
         $CurrentOperation.Text = "Current Operation:`n Installing $($software)"
-        $CurrentOperation.Refresh
+        $CurrentOperation.Refresh()
+        $ProgressBar.Value += $progressAmount
+        $ProgressBar.Refresh()
 
         Install-WinGetSoftware -Id $softwarePackages.$($software)
-
-        $ProgressBar.Value += $progressAmount
-        $ProgressBar.Refresh
     }
 
     $CurrentOperation.Text = "Current Operation:`n Installs Complete"
-    $CurrentOperation.Refresh
+    $CurrentOperation.Refresh()
     $ProgressBar.Value = 100
-    $ProgressBar.Refresh
+    $ProgressBar.Refresh()
 }
 
 
@@ -268,11 +274,20 @@ Function Initialize-Form {
     $buttonInstall.BackColor = [System.Drawing.ColorTranslator]::FromHtml("#8b8f94")
     $buttonInstall.Text = "Install Selections"
     $buttonInstall.Add_Click( {
-            $progressBar.Visible = $true;
-            $currentOperation.Visible = $true;
-            Invoke-SoftwareInstallProcess -Checkboxes $CheckBoxes -ProgressBar $progressBar -CurrentOperation $currentOperation;
-            $progressBar.Visible = $false;
-            $currentOperation.Visible = $false;
+            $buttonInstall.Enabled = $false
+            $buttonClose.Enabled = $false
+            $progressBar.Visible = $true
+            $currentOperation.Visible = $true
+
+            Invoke-SoftwareInstallProcess -Checkboxes $CheckBoxes -ProgressBar $progressBar -CurrentOperation $currentOperation
+
+            # Reset controls for possible additional executions
+            $progressBar.Visible = $false
+            $currentOperation.Visible = $false
+            $progressBar.Value = 1
+            $currentOperation.Text = "Current Operation:`n Checking Dependancies"
+            $buttonInstall.Enabled = $true
+            $buttonClose.Enabled = $true
         })
     $buttonPanel.Controls.Add($buttonInstall)
 
