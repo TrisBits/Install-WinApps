@@ -64,7 +64,7 @@ Function Install-WinGetSoftware {
     )
 
     if ((Invoke-Expression "winget list --exact --id $Id --accept-source-agreements") -eq 'No installed package found matching input criteria.') {
-        Invoke-Expression "winget install --exact --id $Id --source winget --silent"
+        Invoke-Expression "winget install --exact --id $Id --source winget --accept-source-agreements --accept-package-agreements --silent"
     }
 }
 
