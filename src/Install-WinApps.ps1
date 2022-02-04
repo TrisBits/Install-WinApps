@@ -241,7 +241,7 @@ Function Initialize-Form {
     $progressBar.Name = 'progressBar'
     $progressBar.Visible = $false
     $progressBar.Value = 1
-    $progressBar.Style = "Blocks"
+    $progressBar.Style = "Continuous"
     $progressBar.Height = 25
     $progressBar.Width = $form.Width / 2 - 15
     $progressPanel.Controls.Add($progressBar)
