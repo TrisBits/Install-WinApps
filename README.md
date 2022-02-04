@@ -31,10 +31,20 @@ Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw
 
 You will be presented with checkboxes to select from the following software.
 
+> Click the software links below if you wish to read more on the vendor website. <br>
 > ** Indicates my personal recommendations.
 
 - Browsers
-  - Brave
-  - Chrome
-  - Edge
-  - Firefox**
+  - [Brave](https://brave.com/features/)
+  - [Chrome](https://www.google.com/chrome/browser-features/)
+  - [Edge](https://www.microsoft.com/en-us/edge/features)
+  - [Firefox**](https://www.mozilla.org/en-US/firefox/features/)
+- Office Suites
+  - [Libre Office**](https://www.libreoffice.org/discover/libreoffice/)
+  - [Only Office](https://www.onlyoffice.com/desktop.aspx)
+  - [Open Office](https://www.openoffice.org/why/index.html)
+- Security
+  - [Authy**](https://authy.com/)
+  - [Bitwarden**](https://bitwarden.com/)
+  - [KeePass](https://keepass.info/)
+  - [LastPass](https://www.lastpass.com/)
