@@ -85,10 +85,17 @@ Function Invoke-SoftwareInstallProcess {
     $CurrentOperation.Refresh()
 
     $softwarePackages = @{
-        Firefox = 'Mozilla.Firefox'
-        Chrome  = 'Google.Chrome'
-        Brave   = 'BraveSoftware.BraveBrowser'
-        Edge    = 'Microsoft.Edge'
+        Firefox     = 'Mozilla.Firefox'
+        Chrome      = 'Google.Chrome'
+        Brave       = 'BraveSoftware.BraveBrowser'
+        Edge        = 'Microsoft.Edge'
+        LibreOffice = 'TheDocumentFoundation.LibreOffice'
+        OpenOffice  = 'Apache.OpenOffice'
+        OnlyOffice  = 'ONLYOFFICE.DesktopEditors'
+        Authy       = 'Twilio.Authy'
+        Bitwarden   = 'Bitwarden.Bitwarden'
+        LastPass    = 'LogMeIn.LastPass'
+        KeePass     = 'DominikReichl.KeePass'
     }
 
 
@@ -98,8 +105,8 @@ Function Invoke-SoftwareInstallProcess {
     $softwareSelected = [System.Collections.Generic.List[string]]@()
 
     ForEach ($checkbox in $CheckBoxes) {
-        if ($checkbox.Checked -eq $true -and $checkbox.Text -in $softwarePackages.Keys) {
-            $softwareSelected.Add($($checkBox.Text))
+        if ($checkbox.Checked -eq $true -and $checkbox.Name -in $softwarePackages.Keys) {
+            $softwareSelected.Add($($checkBox.Name))
         }
     }
 
@@ -166,7 +173,7 @@ Function New-CheckBoxGroup {
         $checkBox.Location = $System_Drawing_Point
         $checkBox.DataBindings.DefaultDataSourceUpdateMode = 0
 
-        $checkBox.Name = "CheckBox$($software)"
+        $checkBox.Name = $software -replace ' ', ''
         $groupBox.Controls.Add($checkBox)
         $checkBoxCounter++
 
@@ -211,8 +218,11 @@ Function Initialize-Form {
     $browserList = [System.Collections.Generic.List[string]]@('Firefox', 'Chrome', 'Brave', 'Edge')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Browsers' -SoftwareList $browserList
 
-    # $officeList = [System.Collections.Generic.List[string]]@('Libre Office', 'Open Office')
-    # $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Office Suites' -SoftwareList $officeList
+    $officeList = [System.Collections.Generic.List[string]]@('Libre Office', 'Open Office', 'Only Office')
+    $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Office Suites' -SoftwareList $officeList
+
+    $securityList = [System.Collections.Generic.List[string]]@('Authy', 'Bitwarden', 'LastPass', 'KeePass')
+    $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Security' -SoftwareList $securityList
 
     # $listTest1 = [System.Collections.Generic.List[string]]@('Apple', 'Blueberry', 'Orange', 'Cranberry', 'Mango')
     # $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -CheckBoxes $CheckBoxes -SoftwareGroupName 'Fruit' -SoftwareList $listTest1
