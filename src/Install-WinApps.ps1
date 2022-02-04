@@ -116,10 +116,11 @@ Function Invoke-SoftwareInstallProcess {
     ForEach ($software in $softwareSelected) {
         $CurrentOperation.Text = "Current Operation:`n Installing $($software)"
         $CurrentOperation.Refresh()
-        $ProgressBar.Value += $progressAmount
-        $ProgressBar.Refresh()
 
         Install-WinGetSoftware -Id $softwarePackages.$($software)
+
+        $ProgressBar.Value += $progressAmount
+        $ProgressBar.Refresh()
     }
 
     $CurrentOperation.Text = "Current Operation:`n Installs Complete"
