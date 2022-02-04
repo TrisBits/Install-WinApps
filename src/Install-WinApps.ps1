@@ -153,6 +153,7 @@ Function New-CheckBoxGroup {
     $groupBox.AutoSize = $true
     $groupBox.AutoSizeMode = 'GrowAndShrink'
     $groupBox.Text = $SoftwareGroupName
+    $groupBox.ForeColor = [System.Drawing.ColorTranslator]::FromHtml("#2f9ff5")
 
     $checkBoxCounter = 1
     ForEach ($software in ($SoftwareList | Sort-Object)) {
@@ -194,6 +195,10 @@ Function Initialize-Form {
     $GroupBoxes = @()
     $CheckBoxes = @()
 
+    $iconBase64 = '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'
+    $iconBytes = [Convert]::FromBase64String($iconBase64)
+    $iconStream = [System.IO.MemoryStream]::new($iconBytes, 0, $iconBytes.Length)
+
     # Set the size of your form
     $form = New-Object System.Windows.Forms.Form
     $form.AutoScaleMode = "Font"
@@ -204,7 +209,8 @@ Function Initialize-Form {
     $form.StartPosition = "CenterScreen"
     $form.FormBorderStyle = "FixedSingle"
     $form.TopMost = $false
-    $form.BackColor = [System.Drawing.ColorTranslator]::FromHtml("#b8b8b8")
+    $form.Icon = [System.Drawing.Icon]::FromHandle(([System.Drawing.Bitmap]::new($iconStream).GetHIcon()))
+    $form.BackColor = [System.Drawing.ColorTranslator]::FromHtml("#323538")
 
     #Add flow layout panel
     $flowLayoutPanel = New-Object System.Windows.Forms.FlowLayoutPanel
