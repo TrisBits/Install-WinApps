@@ -85,17 +85,20 @@ Function Invoke-SoftwareInstallProcess {
     $CurrentOperation.Refresh()
 
     $softwarePackages = @{
-        Firefox     = 'Mozilla.Firefox'
-        Chrome      = 'Google.Chrome'
-        Brave       = 'BraveSoftware.BraveBrowser'
-        Edge        = 'Microsoft.Edge'
-        LibreOffice = 'TheDocumentFoundation.LibreOffice'
-        OpenOffice  = 'Apache.OpenOffice'
-        OnlyOffice  = 'ONLYOFFICE.DesktopEditors'
-        Authy       = 'Twilio.Authy'
-        Bitwarden   = 'Bitwarden.Bitwarden'
-        LastPass    = 'LogMeIn.LastPass'
-        KeePass     = 'DominikReichl.KeePass'
+        Firefox      = 'Mozilla.Firefox'
+        Chrome       = 'Google.Chrome'
+        Brave        = 'BraveSoftware.BraveBrowser'
+        Edge         = 'Microsoft.Edge'
+        LibreOffice  = 'TheDocumentFoundation.LibreOffice'
+        OpenOffice   = 'Apache.OpenOffice'
+        OnlyOffice   = 'ONLYOFFICE.DesktopEditors'
+        Authy        = 'Twilio.Authy'
+        Bitwarden    = 'Bitwarden.Bitwarden'
+        LastPass     = 'LogMeIn.LastPass'
+        KeePass      = 'DominikReichl.KeePass'
+        Steam        = 'Valve.Steam'
+        GOGGalaxy    = 'GOG.Galaxy'
+        EpicLauncher = 'EpicGames.EpicGamesLauncher'
     }
 
 
@@ -229,6 +232,10 @@ Function Initialize-Form {
 
     $securityList = [System.Collections.Generic.List[string]]@('Authy', 'Bitwarden', 'LastPass', 'KeePass')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Security' -SoftwareList $securityList
+
+    $gamingList = [System.Collections.Generic.List[string]]@('Steam', 'GOG Galaxy', 'Epic Launcher')
+    $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Gaming' -SoftwareList $gamingList
+
 
     # $listTest1 = [System.Collections.Generic.List[string]]@('Apple', 'Blueberry', 'Orange', 'Cranberry', 'Mango')
     # $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -CheckBoxes $CheckBoxes -SoftwareGroupName 'Fruit' -SoftwareList $listTest1
