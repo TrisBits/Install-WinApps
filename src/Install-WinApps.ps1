@@ -85,20 +85,25 @@ Function Invoke-SoftwareInstallProcess {
     $CurrentOperation.Refresh()
 
     $softwarePackages = @{
-        Firefox      = 'Mozilla.Firefox'
-        Chrome       = 'Google.Chrome'
-        Brave        = 'BraveSoftware.BraveBrowser'
-        Edge         = 'Microsoft.Edge'
-        LibreOffice  = 'TheDocumentFoundation.LibreOffice'
-        OpenOffice   = 'Apache.OpenOffice'
-        OnlyOffice   = 'ONLYOFFICE.DesktopEditors'
-        Authy        = 'Twilio.Authy'
-        Bitwarden    = 'Bitwarden.Bitwarden'
-        LastPass     = 'LogMeIn.LastPass'
-        KeePass      = 'DominikReichl.KeePass'
-        Steam        = 'Valve.Steam'
-        GOGGalaxy    = 'GOG.Galaxy'
-        EpicLauncher = 'EpicGames.EpicGamesLauncher'
+        Firefox                   = 'Mozilla.Firefox'
+        Chrome                    = 'Google.Chrome'
+        Brave                     = 'BraveSoftware.BraveBrowser'
+        Edge                      = 'Microsoft.Edge'
+        LibreOffice               = 'TheDocumentFoundation.LibreOffice'
+        OpenOffice                = 'Apache.OpenOffice'
+        OnlyOffice                = 'ONLYOFFICE.DesktopEditors'
+        Authy                     = 'Twilio.Authy'
+        Bitwarden                 = 'Bitwarden.Bitwarden'
+        LastPass                  = 'LogMeIn.LastPass'
+        KeePass                   = 'DominikReichl.KeePass'
+        Steam                     = 'Valve.Steam'
+        GOGGalaxy                 = 'GOG.Galaxy'
+        EpicLauncher              = 'EpicGames.EpicGamesLauncher'
+        Git                       = 'Git.Git'
+        VisualStudioCode          = 'Microsoft.VisualStudioCode'
+        VisualStudio2022Community = 'Microsoft.VisualStudio.2022.Community'
+        PowerShell7               = 'Microsoft.PowerShell'
+        Python3                   = 'Python.Python.3'
     }
 
 
@@ -155,6 +160,7 @@ Function New-CheckBoxGroup {
     $groupBox = New-Object System.Windows.Forms.GroupBox
     $groupBox.AutoSize = $true
     $groupBox.AutoSizeMode = 'GrowAndShrink'
+    $groupBox.Margin = 5
     $groupBox.Text = $SoftwareGroupName
     $groupBox.ForeColor = [System.Drawing.ColorTranslator]::FromHtml("#2f9ff5")
 
@@ -164,7 +170,7 @@ Function New-CheckBoxGroup {
         $checkBox.UseVisualStyleBackColor = $True
         $System_Drawing_Size = New-Object System.Drawing.Size
         $System_Drawing_Size.Width = 120
-        $System_Drawing_Size.Height = 24
+        $System_Drawing_Size.Height = 27
         $checkBox.Size = $System_Drawing_Size
         $checkBox.TabIndex = 2
 
@@ -173,7 +179,7 @@ Function New-CheckBoxGroup {
         $System_Drawing_Point.X = 15
 
         # Vertically space dynamically
-        $System_Drawing_Point.Y = 25 + (($checkBoxCounter - 1) * 25)
+        $System_Drawing_Point.Y = 27 + (($checkBoxCounter - 1) * 27)
         $checkBox.Location = $System_Drawing_Point
         $checkBox.DataBindings.DefaultDataSourceUpdateMode = 0
 
@@ -236,6 +242,9 @@ Function Initialize-Form {
     $gamingList = [System.Collections.Generic.List[string]]@('Steam', 'GOG Galaxy', 'Epic Launcher')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Gaming' -SoftwareList $gamingList
 
+    $codingList = [System.Collections.Generic.List[string]]@('Git', 'Visual Studio Code', 'Visual Studio 2022 Community', 'PowerShell 7', 'Python 3')
+    $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Coding' -SoftwareList $codingList
+
 
     # $listTest1 = [System.Collections.Generic.List[string]]@('Apple', 'Blueberry', 'Orange', 'Cranberry', 'Mango')
     # $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -CheckBoxes $CheckBoxes -SoftwareGroupName 'Fruit' -SoftwareList $listTest1
@@ -275,6 +284,7 @@ Function Initialize-Form {
     $currentOperation.Height = 26
     $currentOperation.Width = $form.Width / 2 - 15
     $currentOperation.Text = "Current Operation:`n Checking Dependancies"
+    $currentOperation.ForeColor = [System.Drawing.ColorTranslator]::FromHtml("#2f9ff5")
     $currentOperation.Margin = 1
     $progressPanel.Controls.Add($currentOperation)
 
