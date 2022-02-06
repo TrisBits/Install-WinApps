@@ -1,6 +1,9 @@
 # Install-WinApps
 
-Easily select and batch install common Windows applications.
+A script to easily select and install common Windows applications, which are free or open source.
+
+Please, consider donating or contributing to any of the open source software you enjoy using.
+Contributing can be as simple as submiting Issues or Feature Requests.
 
 ## Requirements
 
