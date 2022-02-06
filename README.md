@@ -62,6 +62,13 @@ You will be presented with checkboxes to select from the following software.
   - [Skype](https://www.skype.com/en/features/)
   - [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software)
   - [Zoom](https://zoom.us/)
+- Utilities
+  - [7-Zip](https://www.7-zip.org/)
+  - [Notepad++](https://notepad-plus-plus.org/)
+  - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)
+  - [VeraCrypt](https://www.veracrypt.fr/en/Home.html)
+  - [Windows PowerToys](https://docs.microsoft.com/en-us/windows/powertoys/)
+  - [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/)
 - Coding
   - [Git**](https://git-scm.com/)
   - [PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/whats-new/what-s-new-in-powershell-70)

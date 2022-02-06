@@ -109,6 +109,12 @@ Function Invoke-SoftwareInstallProcess {
         Zoom                      = 'Zoom.Zoom'
         Skype                     = 'Microsoft.Skype'
         Teams                     = 'Microsoft.Teams'
+        WindowsTerminal           = 'Microsoft.WindowsTerminal'
+        WindowsPowerToys          = 'Microsoft.PowerToys'
+        Notepad                   = 'Notepad++.Notepad++'
+        Zip                       = '7zip.7zip'
+        PuTTY                     = 'PuTTY.PuTTY'
+        VeraCrypt                 = 'IDRIX.VeraCrypt'
     }
 
 
@@ -188,7 +194,9 @@ Function New-CheckBoxGroup {
         $checkBox.Location = $System_Drawing_Point
         $checkBox.DataBindings.DefaultDataSourceUpdateMode = 0
 
-        $checkBox.Name = $software -replace ' ', ''
+        # Handle characters not accepted in software list Hash Table
+        $checkBox.Name = $software -replace '\s|\+\+|7-', ''
+
         $groupBox.Controls.Add($checkBox)
         $checkBoxCounter++
 
@@ -252,6 +260,9 @@ Function Initialize-Form {
 
     $chatList = [System.Collections.Generic.List[string]]@('Discord', 'Zoom', 'Skype', 'Teams')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Group Chat' -SoftwareList $chatList
+
+    $utilitiesList = [System.Collections.Generic.List[string]]@('Windows Terminal', 'Windows PowerToys', 'Notepad++', '7-Zip', 'PuTTY', 'VeraCrypt')
+    $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Utilities' -SoftwareList $utilitiesList
 
     $codingList = [System.Collections.Generic.List[string]]@('Git', 'Visual Studio Code', 'Visual Studio 2022 Community', 'PowerShell 7', 'Python 3')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Coding' -SoftwareList $codingList
