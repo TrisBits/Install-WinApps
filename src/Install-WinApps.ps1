@@ -105,6 +105,10 @@ Function Invoke-SoftwareInstallProcess {
         VisualStudio2022Community = 'Microsoft.VisualStudio.2022.Community'
         PowerShell7               = 'Microsoft.PowerShell'
         Python3                   = 'Python.Python.3'
+        Discord                   = 'Discord.Discord'
+        Zoom                      = 'Zoom.Zoom'
+        Skype                     = 'Microsoft.Skype'
+        Teams                     = 'Microsoft.Teams'
     }
 
 
@@ -245,6 +249,9 @@ Function Initialize-Form {
 
     $gamingList = [System.Collections.Generic.List[string]]@('Steam', 'GOG Galaxy', 'Epic Launcher')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Gaming' -SoftwareList $gamingList
+
+    $chatList = [System.Collections.Generic.List[string]]@('Discord', 'Zoom', 'Skype', 'Teams')
+    $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Group Chat' -SoftwareList $chatList
 
     $codingList = [System.Collections.Generic.List[string]]@('Git', 'Visual Studio Code', 'Visual Studio 2022 Community', 'PowerShell 7', 'Python 3')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Coding' -SoftwareList $codingList

@@ -54,6 +54,11 @@ You will be presented with checkboxes to select from the following software.
   - [Epic Launcher](https://www.epicgames.com/store/)
   - [GOG Galaxy](https://www.gog.com/)
   - [Steam**](https://store.steampowered.com/)
+- Group Chat
+  - [Discord**](https://discord.com/)
+  - [Skype](https://www.skype.com/en/features/)
+  - [Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software)
+  - [Zoom](https://zoom.us/)
 - Coding
   - [Git**](https://git-scm.com/)
   - [PowerShell 7](https://docs.microsoft.com/en-us/powershell/scripting/whats-new/what-s-new-in-powershell-70)
