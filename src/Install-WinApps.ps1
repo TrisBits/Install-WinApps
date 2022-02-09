@@ -115,6 +115,7 @@ Function Invoke-SoftwareInstallProcess {
         Zip                       = '7zip.7zip'
         PuTTY                     = 'PuTTY.PuTTY'
         VeraCrypt                 = 'IDRIX.VeraCrypt'
+        Cryptomator               = 'Cryptomator.Cryptomator'
     }
 
 
@@ -252,7 +253,7 @@ Function Initialize-Form {
     $emailList = [System.Collections.Generic.List[string]]@('Thunderbird')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Email' -SoftwareList $emailList
 
-    $securityList = [System.Collections.Generic.List[string]]@('Authy', 'Bitwarden', 'LastPass', 'KeePass')
+    $securityList = [System.Collections.Generic.List[string]]@('Authy', 'Bitwarden', 'LastPass', 'KeePass', 'VeraCrypt', 'Cryptomator')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Security' -SoftwareList $securityList
 
     $gamingList = [System.Collections.Generic.List[string]]@('Steam', 'GOG Galaxy', 'Epic Launcher')
@@ -261,7 +262,7 @@ Function Initialize-Form {
     $chatList = [System.Collections.Generic.List[string]]@('Discord', 'Zoom', 'Skype', 'Teams')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Group Chat' -SoftwareList $chatList
 
-    $utilitiesList = [System.Collections.Generic.List[string]]@('Windows Terminal', 'Windows PowerToys', 'Notepad++', '7-Zip', 'PuTTY', 'VeraCrypt')
+    $utilitiesList = [System.Collections.Generic.List[string]]@('Windows Terminal', 'Windows PowerToys', 'Notepad++', '7-Zip', 'PuTTY')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Utilities' -SoftwareList $utilitiesList
 
     $codingList = [System.Collections.Generic.List[string]]@('Git', 'Visual Studio Code', 'Visual Studio 2022 Community', 'PowerShell 7', 'Python 3')

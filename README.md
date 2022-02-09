@@ -51,8 +51,10 @@ You will be presented with checkboxes to select from the following software.
 - Security
   - [Authy**](https://authy.com/)
   - [Bitwarden**](https://bitwarden.com/)
+  - [Cryptomator](https://cryptomator.org/)
   - [KeePass](https://keepass.info/)
   - [LastPass](https://www.lastpass.com/)
+  - [VeraCrypt](https://www.veracrypt.fr/en/Home.html)
 - Gaming
   - [Epic Launcher](https://www.epicgames.com/store/)
   - [GOG Galaxy](https://www.gog.com/)
@@ -66,7 +68,6 @@ You will be presented with checkboxes to select from the following software.
   - [7-Zip](https://www.7-zip.org/)
   - [Notepad++](https://notepad-plus-plus.org/)
   - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)
-  - [VeraCrypt](https://www.veracrypt.fr/en/Home.html)
   - [Windows PowerToys](https://docs.microsoft.com/en-us/windows/powertoys/)
   - [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/)
 - Coding
