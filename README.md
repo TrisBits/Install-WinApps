@@ -1,6 +1,6 @@
-![PSScriptAnalyzer](https://github.com/TrisBits/Install-WinApps/actions/workflows/powershell-analysis.yml/badge.svg)
-
 # Install-WinApps
+
+![PSScriptAnalyzer](https://github.com/TrisBits/Install-WinApps/actions/workflows/powershell-analysis.yml/badge.svg)
 
 A script to easily select and install common Windows applications, which are free or open source.
 
