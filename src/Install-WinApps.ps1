@@ -115,6 +115,7 @@ Function Invoke-SoftwareInstallProcess {
         Notepad                   = 'Notepad++.Notepad++'
         Zip                       = '7zip.7zip'
         PuTTY                     = 'PuTTY.PuTTY'
+        OBSStudio                 = 'OBSProject.OBSStudio'
         VeraCrypt                 = 'IDRIX.VeraCrypt'
         Cryptomator               = 'Cryptomator.Cryptomator'
     }
@@ -263,7 +264,7 @@ Function Initialize-Form {
     $chatList = [System.Collections.Generic.List[string]]@('Discord', 'Zoom', 'Skype', 'Teams')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Group Chat' -SoftwareList $chatList
 
-    $utilitiesList = [System.Collections.Generic.List[string]]@('Windows Terminal', 'Windows PowerToys', 'Notepad++', '7-Zip', 'PuTTY')
+    $utilitiesList = [System.Collections.Generic.List[string]]@('Windows Terminal', 'Windows PowerToys', 'Notepad++', '7-Zip', 'PuTTY', 'OBS Studio')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Utilities' -SoftwareList $utilitiesList
 
     $codingList = [System.Collections.Generic.List[string]]@('Git', 'Visual Studio Code', 'Visual Studio 2022 Community', 'PowerShell 7', 'Python 3')

@@ -68,6 +68,7 @@ You will be presented with checkboxes to select from the following software.
 - Utilities
   - [7-Zip](https://www.7-zip.org/)
   - [Notepad++](https://notepad-plus-plus.org/)
+  - [OBS Studio](https://obsproject.com/)
   - [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/)
   - [Windows PowerToys](https://docs.microsoft.com/en-us/windows/powertoys/)
   - [Windows Terminal](https://docs.microsoft.com/en-us/windows/terminal/)
