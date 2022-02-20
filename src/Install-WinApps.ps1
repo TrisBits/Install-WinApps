@@ -118,6 +118,8 @@ Function Invoke-SoftwareInstallProcess {
         OBSStudio                 = 'OBSProject.OBSStudio'
         VeraCrypt                 = 'IDRIX.VeraCrypt'
         Cryptomator               = 'Cryptomator.Cryptomator'
+        AdobeAcrobatReaderDC      = 'Adobe.Acrobat.Reader.32-bit'
+        SumatraPDF                = 'SumatraPDF.SumatraPDF'
     }
 
 
@@ -251,6 +253,9 @@ Function Initialize-Form {
 
     $officeList = [System.Collections.Generic.List[string]]@('Libre Office', 'Open Office', 'Only Office')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Office Suites' -SoftwareList $officeList
+
+    $pdfList = [System.Collections.Generic.List[string]]@('Adobe Acrobat Reader DC', 'Sumatra PDF')
+    $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'PDF Readers' -SoftwareList $pdfList
 
     $emailList = [System.Collections.Generic.List[string]]@('Thunderbird')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Email' -SoftwareList $emailList

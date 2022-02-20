@@ -47,6 +47,9 @@ You will be presented with checkboxes to select from the following software.
   - [Libre Office**](https://www.libreoffice.org/discover/libreoffice/)
   - [Only Office](https://www.onlyoffice.com/desktop.aspx)
   - [Open Office](https://www.openoffice.org/why/index.html)
+- PDF Readers
+  - [Adobe Acrobat Reader DC](https://helpx.adobe.com/reader.html)
+  - [Sumatra PDF](https://www.sumatrapdfreader.org/)
 - Email
   - [Thunderbird](https://www.thunderbird.net/en-US/features/)
 - Security
