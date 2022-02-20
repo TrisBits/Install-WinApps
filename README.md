@@ -42,6 +42,7 @@ You will be presented with checkboxes to select from the following software.
   - [Chrome](https://www.google.com/chrome/browser-features/)
   - [Edge](https://www.microsoft.com/en-us/edge/features)
   - [Firefox**](https://www.mozilla.org/en-US/firefox/features/)
+  - [Vivaldi](https://vivaldi.com/)
 - Office Suites
   - [Libre Office**](https://www.libreoffice.org/discover/libreoffice/)
   - [Only Office](https://www.onlyoffice.com/desktop.aspx)

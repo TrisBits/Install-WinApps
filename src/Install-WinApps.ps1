@@ -89,6 +89,7 @@ Function Invoke-SoftwareInstallProcess {
         Chrome                    = 'Google.Chrome'
         Brave                     = 'BraveSoftware.BraveBrowser'
         Edge                      = 'Microsoft.Edge'
+        Vivaldi                   = 'VivaldiTechnologies.Vivaldi'
         LibreOffice               = 'TheDocumentFoundation.LibreOffice'
         OpenOffice                = 'Apache.OpenOffice'
         OnlyOffice                = 'ONLYOFFICE.DesktopEditors'
@@ -244,7 +245,7 @@ Function Initialize-Form {
     $form.Controls.Add($flowLayoutPanel)
 
     # Software Selection Groups
-    $browserList = [System.Collections.Generic.List[string]]@('Firefox', 'Chrome', 'Brave', 'Edge')
+    $browserList = [System.Collections.Generic.List[string]]@('Firefox', 'Chrome', 'Brave', 'Edge', 'Vivaldi')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Browsers' -SoftwareList $browserList
 
     $officeList = [System.Collections.Generic.List[string]]@('Libre Office', 'Open Office', 'Only Office')
