@@ -81,3 +81,9 @@ You will be presented with checkboxes to select from the following software.
   - [Python 3](https://www.python.org/)
   - [Visual Studio 2022 Community](https://visualstudio.microsoft.com/vs/community/)
   - [Visual Studio Code**](https://code.visualstudio.com/docs)
+
+## License
+
+Copyright (c) TrisBits. All rights reserved.
+
+Licensed under the [MIT](LICENSE) license.
