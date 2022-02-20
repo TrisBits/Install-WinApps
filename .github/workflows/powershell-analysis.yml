@@ -12,8 +12,12 @@ name: PSScriptAnalyzer
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'src/**'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'src/**'
  # schedule:
  #   - cron: '17 12 * * 6'
 
