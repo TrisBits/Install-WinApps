@@ -120,6 +120,9 @@ Function Invoke-SoftwareInstallProcess {
         Cryptomator               = 'Cryptomator.Cryptomator'
         AdobeAcrobatReaderDC      = 'Adobe.Acrobat.Reader.32-bit'
         SumatraPDF                = 'SumatraPDF.SumatraPDF'
+        VLC                       = 'VideoLAN.VLC'
+        foobar2000                = 'PeterPawlowski.foobar2000'
+        Kodi                      = 'XBMCFoundation.Kodi'
     }
 
 
@@ -259,6 +262,9 @@ Function Initialize-Form {
 
     $emailList = [System.Collections.Generic.List[string]]@('Thunderbird')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Email' -SoftwareList $emailList
+
+    $mediaPlayerList = [System.Collections.Generic.List[string]]@('VLC', 'foobar2000', 'Kodi')
+    $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Media Players' -SoftwareList $mediaPlayerList
 
     $securityList = [System.Collections.Generic.List[string]]@('Authy', 'Bitwarden', 'LastPass', 'KeePass', 'VeraCrypt', 'Cryptomator')
     $GroupBoxes, $Checkboxes = New-CheckBoxGroup -GroupBoxes $GroupBoxes -Checkboxes $CheckBoxes -SoftwareGroupName 'Security' -SoftwareList $securityList

@@ -54,6 +54,10 @@ You will be presented with checkboxes to select from the following software.
   - [Sumatra PDF](https://www.sumatrapdfreader.org/)
 - Email
   - [Thunderbird](https://www.thunderbird.net/en-US/features/)
+- Media Players
+  - [foobar2000](https://www.foobar2000.org/)
+  - [Kodi](https://kodi.tv/)
+  - [VLC](https://www.videolan.org/vlc/features.html)
 - Security
   - [Authy](https://authy.com/)
   - [Bitwarden](https://bitwarden.com/)
